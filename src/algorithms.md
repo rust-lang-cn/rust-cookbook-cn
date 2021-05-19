@@ -1,25 +1,39 @@
-# Algorithms
+# 算法
 
-| Recipe | Crates | Categories |
+<!--
+> [algorithms.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/algorithms.md)
+> <br />
+> commit - 2eee7043988e4289f16b5deca9f3b36e2516362b - 2020.04.18
+-->
+
+## 生成随机值
+
+| 实例名称 | Crates | 类别 |
 |--------|--------|------------|
-| [Generate random numbers][ex-rand] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
-| [Generate random numbers within a range][ex-rand-range] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
-| [Generate random numbers with given distribution][ex-rand-dist] | [![rand-badge]][rand] [![rand_distr-badge]][rand_distr] | [![cat-science-badge]][cat-science] |
-| [Generate random values of a custom type][ex-rand-custom] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
-| [Create random passwords from a set of alphanumeric characters][ex-rand-passwd] | [![rand-badge]][rand] | [![cat-os-badge]][cat-os] |
-| [Create random passwords from a set of user-defined characters][ex-rand-choose] | [![rand-badge]][rand] | [![cat-os-badge]][cat-os] |
-| [Sort a Vector of Integers][ex-sort-integers] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
-| [Sort a Vector of Floats][ex-sort-floats] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
-| [Sort a Vector of Structs][ex-sort-structs] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [生成随机数][ex-rand] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
+| [生成范围内随机数][ex-rand-range] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
+| [生成给定分布随机数][ex-rand-dist] | [![rand-badge]][rand] [![rand_distr-badge]][rand_distr] | [![cat-science-badge]][cat-science] |
+| [生成自定义类型随机值][ex-rand-custom] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
+| [从一组字母数字字符创建随机密码][ex-rand-passwd] | [![rand-badge]][rand] | [![cat-os-badge]][cat-os] |
+| [从一组用户定义字符创建随机密码][ex-rand-choose] | [![rand-badge]][rand] | [![cat-os-badge]][cat-os] |
 
-[ex-rand]: algorithms/randomness.html#generate-random-numbers
-[ex-rand-range]: algorithms/randomness.html#generate-random-numbers-within-a-range
-[ex-rand-dist]: algorithms/randomness.html#generate-random-numbers-with-given-distribution
-[ex-rand-custom]: algorithms/randomness.html#generate-random-values-of-a-custom-type
-[ex-rand-passwd]: algorithms/randomness.html#create-random-passwords-from-a-set-of-alphanumeric-characters
-[ex-rand-choose]:   algorithms/randomness.html#create-random-passwords-from-a-set-of-user-defined-characters
-[ex-sort-integers]:   algorithms/sorting.html#sort-a-vector-of-integers
-[ex-sort-floats]:   algorithms/sorting.html#sort-a-vector-of-floats
-[ex-sort-structs]:   algorithms/sorting.html#sort-a-vector-of-structs
+## Vector 排序
+
+| 实例名称 | Crates | 类别 |
+|--------|--------|------------|
+| [整数 Vector 排序][ex-sort-integers] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [浮点数 Vector 排序][ex-sort-floats] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+| [结构体 Vector 排序][ex-sort-structs] | [![std-badge]][std] | [![cat-science-badge]][cat-science] |
+
+[ex-rand]: algorithms/randomness.md#生成随机数
+[ex-rand-range]: algorithms/randomness.md#生成范围内随机数
+[ex-rand-dist]: algorithms/randomness.md#生成给定分布随机数
+[ex-rand-custom]: algorithms/randomness.md#生成自定义类型随机值
+[ex-rand-passwd]: algorithms/randomness.md#从一组字母数字字符创建随机密码
+[ex-rand-choose]:   algorithms/randomness.md#从一组用户定义字符创建随机密码
+
+[ex-sort-integers]:   algorithms/sorting.md#整数-vector-排序
+[ex-sort-floats]:   algorithms/sorting.md#浮点数-vector-排序
+[ex-sort-structs]:   algorithms/sorting.md#结构体-vector-排序
 
 {{#include links.md}}

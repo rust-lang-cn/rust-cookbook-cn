@@ -1,13 +1,21 @@
-# Compression
+# 压缩
 
-| Recipe | Crates | Categories |
+<!--
+> [compression.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/compression.md)
+> <br />
+> commit 97dabe59ae705bf6a2aaebbcd1d189ec2a83f98b - 2018.07.11
+-->
+
+## 使用 tar 包
+
+| 实例名称 | Crates | 类别 |
 |--------|--------|------------|
-| [Decompress a tarball][ex-tar-decompress] | [![flate2-badge]][flate2] [![tar-badge]][tar] | [![cat-compression-badge]][cat-compression] |
-| [Compress a directory into a tarball][ex-tar-compress] | [![flate2-badge]][flate2] [![tar-badge]][tar] | [![cat-compression-badge]][cat-compression] |
-| [Decompress a tarball while removing a prefix from the paths][ex-tar-strip-prefix] | [![flate2-badge]][flate2] [![tar-badge]][tar] | [![cat-compression-badge]][cat-compression] |
+| [解压 tar 包][ex-tar-decompress] | [![flate2-badge]][flate2] [![tar-badge]][tar] | [![cat-compression-badge]][cat-compression] |
+| [压缩目录为 tar 包][ex-tar-compress] | [![flate2-badge]][flate2] [![tar-badge]][tar] | [![cat-compression-badge]][cat-compression] |
+| [从路径移除前缀时，解压 tar 包][ex-tar-strip-prefix] | [![flate2-badge]][flate2] [![tar-badge]][tar] | [![cat-compression-badge]][cat-compression] |
 
-[ex-tar-decompress]: compression/tar.html#decompress-a-tarball
-[ex-tar-compress]: compression/tar.html#compress-a-directory-into-tarball
-[ex-tar-strip-prefix]: compression/tar.html#decompress-a-tarball-while-removing-a-prefix-from-the-paths
+[ex-tar-decompress]: compression/tar.md#解压-tar-包
+[ex-tar-compress]: compression/tar.md#压缩目录为-tar-包
+[ex-tar-strip-prefix]: compression/tar.md#从路径移除前缀时解压-tar-包
 
 {{#include links.md}}

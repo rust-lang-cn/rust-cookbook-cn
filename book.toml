@@ -1,7 +1,7 @@
 
 [book]
-title = "Rust Cookbook"
-description = "Collection of useful Rust code examples"
+title = "Rust Cookbook 中文版"
+description = "Rust Cookbook 是 Rust 官方图书的中文翻译版，由一系列简单程序示例构成，展示了 Rust 实际开发场景的良好实践。"
 authors = ["Rust Language Community"]
 edition = "2018"
 multilingual = false
@@ -12,6 +12,9 @@ src = "src"
 mathjax-support = false
 # theme = "theme"
 additional-css = ["theme/custom.css"]
+additional-js = ["language.js"]
+git-repository-url = "https://github.com/rust-lang-cn/rust-cookbook-cn"
+edit-url-template = "https://github.com/rust-lang-cn/rust-cookbook-cn/edit/master/{path}"
 
 [output.html.playpen]
 editable = false

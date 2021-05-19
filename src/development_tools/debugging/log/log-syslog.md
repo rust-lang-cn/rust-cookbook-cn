@@ -1,11 +1,14 @@
-## Log to the Unix syslog
+## 记录到 Unix 系统日志
+
+<!--
+> [development_tools/debugging/log/log-syslog.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/development_tools/debugging/log/log-syslog.md)
+> <br />
+> commit b61c8e588ad8445de36cd5f28e99232b5f858a41 - 2020.06.01
+-->
 
 [![log-badge]][log] [![syslog-badge]][syslog] [![cat-debugging-badge]][cat-debugging]
 
-Logs messages to [UNIX syslog]. Initializes logger backend
-with [`syslog::init`]. [`syslog::Facility`] records the program submitting
-the log entry's classification, [`log::LevelFilter`] denotes allowed log verbosity
-and `Option<&str>` holds optional application name.
+本实例实现将信息记录到 [UNIX syslog]。使用 [`syslog::init`] 初始化记录器后端。[`syslog::Facility`] 记录提交日志项分类的程序，[`log::LevelFilter`] 表示欲记录日志的等级，`Option<&str>` 定义应用程序名称（可选）。
 
 ```rust,edition2018
 # #[cfg(target_os = "linux")]

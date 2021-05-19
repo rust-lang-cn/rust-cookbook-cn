@@ -1,11 +1,14 @@
-## Sort a Vector of Structs
+## 结构体 Vector 排序
+
+<!--
+> [algorithms/sorting/sort_struct.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/algorithms/sorting/sort_struct.md)
+> <br />
+> commit - b61c8e588ad8445de36cd5f28e99232b5f858a41 - 2020.06.01
+-->
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-Sorts a Vector of Person structs with properties `name` and `age` by its natural
-order (By name and age). In order to make Person sortable you need four traits [`Eq`],
-[`PartialEq`], [`Ord`] and [`PartialOrd`]. These traits can be simply derived.
-You can also provide a custom comparator function using a [`vec:sort_by`] method and sort only by age.
+依据自然顺序（按名称和年龄），对具有 `name` 和 `age` 属性的 Person 结构体 Vector 排序。为了使 Person 可排序，你需要四个 traits：[`Eq`]、[`PartialEq`]、[`Ord`]，以及 [`PartialOrd`]。这些 traits 可以被简单地派生。你也可以使用 [`vec:sort_by`] 方法自定义比较函数，仅按照年龄排序。
 
 ```rust,edition2018
 #[derive(Debug, Eq, Ord, PartialEq, PartialOrd)]
@@ -30,7 +33,7 @@ fn main() {
         Person::new("John".to_string(), 1),
     ];
 
-    // Sort people by derived natural order (Name and age)
+    // 根据获得的自然顺序（name 和 age）对 people 进行排序
     people.sort();
 
     assert_eq!(
@@ -41,7 +44,7 @@ fn main() {
             Person::new("Zoe".to_string(), 25),
         ]);
 
-    // Sort people by age
+    // 根据 age 值对 people 进行排序
     people.sort_by(|a, b| b.age.cmp(&a.age));
 
     assert_eq!(
@@ -53,7 +56,6 @@ fn main() {
         ]);
 
 }
-
 ```
 
 [`Eq`]: https://doc.rust-lang.org/std/cmp/trait.Eq.html 

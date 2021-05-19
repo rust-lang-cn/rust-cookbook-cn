@@ -1,9 +1,14 @@
-## Create random passwords from a set of alphanumeric characters
+## 从一组字母数字字符创建随机密码
+
+<!--
+> [algorithms/randomness/rand-passwd.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/algorithms/randomness/rand-passwd.md)
+> <br />
+> commit - 8d0d2e3fb1f26e4e79a914ea332096a0ba2ba2da - 2021.01.02
+-->
 
 [![rand-badge]][rand] [![cat-os-badge]][cat-os]
 
-Randomly generates a string of given length ASCII characters in the range `A-Z,
-a-z, 0-9`, with [`Alphanumeric`] sample.
+随机生成一个给定长度的 ASCII 字符串，范围为 `A-Z，a-z，0-9`，使用[字母数字][`Alphanumeric`]样本。
 
 ```rust,edition2018
 use rand::{thread_rng, Rng};

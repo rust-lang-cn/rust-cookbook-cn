@@ -1,8 +1,14 @@
-## Generate random numbers within a range
+## 生成范围内随机数
+
+<!--
+> [algorithms/randomness/rand-range.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/algorithms/randomness/rand-range.md)
+> <br />
+> commit - 8d0d2e3fb1f26e4e79a914ea332096a0ba2ba2da - 2021.01.02
+-->
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-Generates a random value within half-open `[0, 10)` range (not including `10`) with [`Rng::gen_range`].
+使用 [`Rng::gen_range`]，在半开放的 `[0, 10)` 范围内（不包括 `10`）生成一个随机值。
 
 ```rust,edition2018
 use rand::Rng;
@@ -14,9 +20,7 @@ fn main() {
 }
 ```
 
-[`Uniform`] can obtain values with [uniform distribution].
-This has the same effect, but may be faster when repeatedly generating numbers
-in the same range.
+使用 [`Uniform`] 模块可以得到[均匀分布][uniform distribution]的值。下述代码和上述代码具有相同的效果，但在相同范围内重复生成数字时，下述代码性能可能会更好。
 
 ```rust,edition2018
 

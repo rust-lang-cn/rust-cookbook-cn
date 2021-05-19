@@ -1,9 +1,14 @@
-## Extract phone numbers from text
+## 从文本提取电话号码
+
+<!--
+> [text/regex/phone.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/text/regex/phone.md)
+> <br />
+> commit b61c8e588ad8445de36cd5f28e99232b5f858a41 - 2020.06.01
+-->
 
 [![regex-badge]][regex] [![cat-text-processing-badge]][cat-text-processing]
 
-Processes a string of text using [`Regex::captures_iter`] to capture multiple
-phone numbers.  The example here is for US convention phone numbers.
+使用 [`Regex::captures_iter`] 处理一个文本字符串，以捕获多个电话号码。这里的例子中是美国电话号码格式。
 
 ```rust,edition2018
 # use error_chain::error_chain;
@@ -40,13 +45,13 @@ fn main() -> Result<()> {
 
     let re = Regex::new(
         r#"(?x)
-          (?:\+?1)?                       # Country Code Optional
+          (?:\+?1)?                       # 国家代码，可选项
           [\s\.]?
-          (([2-9]\d{2})|\(([2-9]\d{2})\)) # Area Code
+          (([2-9]\d{2})|\(([2-9]\d{2})\)) # 地区代码
           [\s\.\-]?
-          ([2-9]\d{2})                    # Exchange Code
+          ([2-9]\d{2})                    # 交换代码
           [\s\.\-]?
-          (\d{4})                         # Subscriber Number"#,
+          (\d{4})                         # 用户号码"#,
     )?;
 
     let phone_numbers = re.captures_iter(phone_text).filter_map(|cap| {

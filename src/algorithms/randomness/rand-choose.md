@@ -1,9 +1,14 @@
-## Create random passwords from a set of user-defined characters
+## 从一组用户定义字符创建随机密码
+
+<!--
+> [algorithms/randomness/rand-choose.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/src/algorithms/randomness/rand-choose.md)
+> <br />
+> commit - 8d0d2e3fb1f26e4e79a914ea332096a0ba2ba2da - 2021.01.02
+-->
 
 [![rand-badge]][rand] [![cat-os-badge]][cat-os]
 
-Randomly generates a string of given length ASCII characters with custom
-user-defined bytestring, with [`gen_range`].
+使用用户自定义的字节字符串，使用 [`gen_range`] 函数，随机生成一个给定长度的 ASCII 字符串。
 
 ```rust,edition2018
 fn main() {
