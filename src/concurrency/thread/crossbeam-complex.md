@@ -40,7 +40,7 @@ fn main() {
             drop(snd1);
         });
 
-        // 由 2 个县城并行处理
+        // 由 2 个线城并行处理
         for _ in 0..n_workers {
             // 从数据源发送数据到接收器，接收器接收数据
             let (sendr, recvr) = (snd2.clone(), rcv1.clone());
