@@ -36,15 +36,14 @@ fn main() {
                 println!("Source sent {}", i);
             }
             // 关闭信道 —— 这是退出的必要条件
-            // for 巡海在工作线程中
             drop(snd1);
         });
 
-        // 由 2 个县城并行处理
+        // 由 2 个线程并行处理
         for _ in 0..n_workers {
             // 从数据源发送数据到接收器，接收器接收数据
             let (sendr, recvr) = (snd2.clone(), rcv1.clone());
-            // 在不同的线程中衍生工人
+            
             s.spawn(move |_| {
             thread::sleep(Duration::from_millis(500));
                 // 接收数据，直到信道关闭前
@@ -56,7 +55,6 @@ fn main() {
             });
         }
         // 关闭信道，否则接收器不会关闭
-        // 退出 for 循坏
         drop(snd2);
 
         // 接收器
